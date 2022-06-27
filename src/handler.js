@@ -116,7 +116,7 @@ const editBookByIdHandler = (request, h) => {
   if (!name) {
     const response = h.response({
       status: 'fail',
-      message: 'Gagal menambahkan buku. Mohon isi nama buku',
+      message: 'Gagal memperbarui buku. Mohon isi nama buku',
     });
     response.code(400);
     return response;
@@ -125,7 +125,7 @@ const editBookByIdHandler = (request, h) => {
   if (pageCount < readPage) {
     const response = h.response({
       status: 'fail',
-      message: 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount',
+      message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
     });
     response.code(400);
     return response;
@@ -153,7 +153,7 @@ const editBookByIdHandler = (request, h) => {
       publisher,
     };
     const response = h.response({
-      status: 'succes',
+      status: 'success',
       message: 'Buku berhasil diperbarui',
     });
     response.code(200);
